@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-gray-900 text-white min-h-screen;
+}
+
+/* Custom styles for the piano companion app */
+.app-container {
+  @apply flex flex-col h-screen max-h-screen overflow-hidden;
+}
+
+.sheet-music-container {
+  @apply flex-grow overflow-auto;
+}
+
+.controls-container {
+  @apply p-4 bg-gray-800 border-t border-gray-700;
+}
+
+.piano-keyboard {
+  @apply h-32 w-full bg-gray-800 border-t border-gray-700;
+}
+
+.metronome-flash {
+  @apply bg-red-500 bg-opacity-50 transition-all duration-100;
+}
+
+/* Transport controls */
+.transport-controls {
+  @apply flex gap-2 justify-center mb-4;
+}
+
+.transport-button {
+  @apply p-2 rounded-full bg-gray-700 hover:bg-gray-600 text-white transition-colors;
+}
+
+/* Dark mode is default, this is for light mode option */
+.light-mode {
+  @apply bg-gray-100 text-gray-900;
+}
+
+.light-mode .controls-container,
+.light-mode .piano-keyboard {
+  @apply bg-gray-200 border-gray-300;
+}
